@@ -34,7 +34,12 @@ reader.readAsBinaryString(file);
 
   function send(){ 
     setstatus(true)
-axios.post("http://localhost:5000/sendmail",{msg:msg,emailList:emailList})
+axios.post("https://bulkmail-backend-oenq.onrender.com/sendMail",
+{
+    msg: msg,
+    emaillist: emaillist
+})
+
 .then (function(data){
   if(data.data===true){
     alert("Email Send Successfully")
