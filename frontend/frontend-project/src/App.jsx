@@ -37,7 +37,7 @@ reader.readAsBinaryString(file);
 axios.post("https://bulkmail-backend-oenq.onrender.com/sendMail",
 {
     msg: msg,
-    emaillist: emaillist
+    emailList: emailList
 })
 
 .then (function(data){
